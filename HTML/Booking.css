@@ -1,0 +1,302 @@
+:root {
+  --primary-blue: #7ea9ff;
+  --light-gray: #d9d9d9;
+  --dark-gray: #5b5b5b;
+  --white: #ffffff;
+  --black: #000000;
+  --font-family-main: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-main);
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.page-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  padding-left: 73px;
+  padding-right: 73px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* CSS from section:header */
+.site-header {
+  background-color: var(--primary-blue);
+  height: 80px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 29px;
+}
+
+.logo-text {
+  font-family: var(--font-family-main);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--black);
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 47px;
+}
+
+.main-nav a {
+  font-family: var(--font-family-main);
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--black);
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .site-header {
+    height: auto;
+    padding: 15px 0;
+  }
+  .main-nav ul {
+    gap: 20px;
+  }
+  .main-nav a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 15px;
+    }
+}
+
+/* CSS from section:features */
+.features-section {
+  padding-top: 89px;
+  padding-bottom: 129px;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--light-gray);
+  border-radius: 10px;
+  width: 380px;
+  height: 46px;
+  padding: 0 30px;
+  box-sizing: border-box;
+  margin-bottom: 88px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.dropdown-arrow {
+  transform: rotate(90deg);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 47px;
+}
+
+.nurse-card {
+  background-color: var(--light-gray);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image-placeholder {
+  height: 200px;
+  background-color: var(--light-gray);
+}
+
+.card-content {
+  padding: 28px 20px 28px;
+  text-align: center;
+  border-top: 1px solid var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  flex-grow: 1;
+}
+
+.card-name, .card-specialization {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.btn-book {
+  background-color: var(--dark-gray);
+  color: var(--white);
+  border-radius: 30px;
+  padding: 10px 0;
+  width: 150px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: auto;
+}
+
+/* Responsive Features */
+@media (max-width: 1400px) {
+    .cards-grid {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+  .features-section {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+  .filter-bar {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+/* CSS from section:footer */
+.site-footer {
+  background-color: var(--primary-blue);
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand {
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-logo {
+  width: 100px;
+  height: 100px;
+}
+
+.footer-brand-name {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.footer-sitemap {
+  text-align: center;
+  gap: 36px;
+}
+
+.footer-heading {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.footer-actions {
+  align-items: center;
+  gap: 36px;
+}
+
+.btn-book-footer {
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 30px;
+  font-size: 28px;
+  font-weight: 500;
+  padding: 8px 22px;
+  min-width: 136px;
+  text-align: center;
+}
+
+.follow-us {
+  margin-top: 50px;
+}
+
+/* Responsive Footer */
+@media (max-width: 992px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+  }
+  .footer-sitemap, .footer-actions {
+    align-items: center;
+  }
+  .follow-us {
+    margin-top: 0;
+  }
+}
